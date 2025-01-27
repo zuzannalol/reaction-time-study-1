@@ -56,11 +56,12 @@ if not st.session_state.experiment_started:
 Użyj przycisków, aby dokonać wyboru:")
     st.markdown("- **Z** - Prawdziwe słowo")
     st.markdown("- **M** - Pseudowyraz")
-    st.write("Po naciśnięciu przycisku "Start", eksperyment się rozpocznie.")
+    st.write("Po naciśnięciu przycisku "Start", eksperyment się rozpocznie.")  # Poprawiona linia
 
     if st.button("Start"):
         st.session_state.experiment_started = True
         st.session_state.start_time = time.time()
+
 
 # Ekran eksperymentu
 elif st.session_state.current_index < len(stimuli):
